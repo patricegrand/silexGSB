@@ -1,5 +1,4 @@
 <?php
-//require_once  __DIR__.'/../app/fonctions.php';
 require_once __DIR__.'/../modele/class.pdogsb.php';
 use Symfony\Component\HttpFoundation\Request;
 use Silex\Application;
@@ -10,7 +9,7 @@ class ConnexionControleur{
 
     public function __construct(){
         ob_start();             // démarre le flux de sortie
-        require __DIR__.'/../vues/v_entete.php';
+        require_once __DIR__.'/../vues/v_entete.php';
     }
     public function accueil(){
         require_once __DIR__.'/../vues/v_connexion.php';
@@ -76,8 +75,6 @@ class EtatFraisControleur {
             return $view;
         }
         else{
-//            $response = new Response();
-//            $response->setContent('Connexion nécessaire');
             return Response::HTTP_NOT_FOUND;
         }
     }
