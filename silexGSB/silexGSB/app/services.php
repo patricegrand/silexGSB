@@ -56,11 +56,11 @@ class CouteauSuisse{
  * @return le mois au format aaaamm
 */
     public function getMois($date){
-                    @list($jour,$mois,$annee) = explode('/',$date);
-                    if(strlen($mois) == 1){
-                            $mois = "0".$mois;
-                    }
-                    return $annee.$mois;
+            @list($jour,$mois,$annee) = explode('/',$date);
+            if(strlen($mois) == 1){
+                    $mois = "0".$mois;
+            }
+            return $annee.$mois;
     }
 
 /* gestion des erreurs*/
